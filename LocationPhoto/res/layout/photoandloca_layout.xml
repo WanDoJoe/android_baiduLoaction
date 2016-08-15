@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/photo_ll_bottom" >
+
+        <ImageView
+            android:id="@+id/photo_vb"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:src="@drawable/home_imag" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@color/white30" >
+
+            <Button
+                android:id="@+id/photolocation_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/back2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="140dp"
+            android:layout_marginTop="48dp" >
+
+            <ListView
+                android:id="@+id/poi_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:visibility="gone" />
+
+        <!-- <com.baidu.mapapi.map.MapView -->
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:clickable="false" />
+		<Button 
+		    android:id="@+id/photo_gonemapview_bn"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:text="隐藏地图"
+		    android:gravity="left"
+		    android:layout_gravity="bottom"
+		    android:layout_marginBottom="40dp"
+		    android:visibility="gone"
+		    />
+        <Button
+            android:id="@+id/photo_location_bn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:autoLink="map"
+            android:background="@drawable/bottombn_bg"
+            android:drawableLeft="@drawable/postion_icon"
+            android:drawableRight="@drawable/rightarrow"
+            android:gravity="center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:text="位置"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/location_list_load_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/load"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/photo_ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#c5c5c5"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#c5c5c5" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/photo_camera_bn"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/location_bn"
+                android:text="拍照"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/photo_submit_bn"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/location_bn"
+                android:text="确定"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
